@@ -2,15 +2,18 @@
     "manifest_version": 2,
     "name": "My Cool Extension",
     "version": "0.1",
+    "permissions": [
+      "downloads"
+    ],
     "background": {
       "scripts": ["background.js"]
     },
     "content_scripts": [
       {
         "matches": [
-          "https://grpc.io/*"
+          "https://app.hubspot.com/*"
         ],
-        "js": ["jquery-3.4.1.min.js", "content.js"]
+        "js": ["jspdf.debug.1.4.1.js", "pdfobject.min.js", "xlsx.full.min.js",  "html2canvas.min.js", "jquery-3.4.1.min.js", "content.js"]
       }
     ],
    "browser_action": {
